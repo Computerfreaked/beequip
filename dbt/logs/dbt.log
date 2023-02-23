@@ -1,0 +1,56 @@
+
+
+============================== 2023-02-22 19:07:45.009848 | 7ec87ebb-cce8-4d27-965d-d55d9692318a ==============================
+[0m19:07:45.009848 [info ] [MainThread]: Running with dbt=1.4.1
+[0m19:07:45.011728 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/root/.dbt', 'send_anonymous_usage_stats': True, 'quiet': False, 'no_print': False, 'cache_selected_only': False, 'skip_profile_setup': False, 'which': 'init', 'indirect_selection': 'eager'}
+[0m19:07:45.011952 [debug] [MainThread]: Tracking: tracking
+[0m19:07:45.013950 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f373cc696f0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f373cc687c0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f373cc69d50>]}
+[0m19:07:45.014425 [info ] [MainThread]: Creating dbt configuration folder at /root/.dbt
+[0m19:08:01.254196 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f373cc6a2f0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f373cc68760>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f373cc68b50>]}
+[0m19:08:01.255207 [debug] [MainThread]: Flushing usage events
+[0m19:08:01.717877 [error] [MainThread]: Encountered an error:
+
+[0m19:08:01.730697 [error] [MainThread]: Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/dbt/main.py", line 135, in main
+    results, succeeded = handle_and_check(args)
+  File "/usr/local/lib/python3.10/site-packages/dbt/main.py", line 198, in handle_and_check
+    task, res = run_from_args(parsed)
+  File "/usr/local/lib/python3.10/site-packages/dbt/main.py", line 245, in run_from_args
+    results = task.run()
+  File "/usr/local/lib/python3.10/site-packages/dbt/task/init.py", line 286, in run
+    project_name = self.get_valid_project_name()
+  File "/usr/local/lib/python3.10/site-packages/dbt/task/init.py", line 243, in get_valid_project_name
+    name = click.prompt("Enter a name for your project (letters, digits, underscore)")
+  File "/usr/local/lib/python3.10/site-packages/click/termui.py", line 166, in prompt
+    value = prompt_func(prompt)
+  File "/usr/local/lib/python3.10/site-packages/click/termui.py", line 149, in prompt_func
+    raise Abort() from None
+click.exceptions.Abort
+
+
+
+============================== 2023-02-22 19:09:06.429859 | 68236669-eaea-43fc-887d-b851a54ab2f4 ==============================
+[0m19:09:06.429859 [info ] [MainThread]: Running with dbt=1.4.1
+[0m19:09:06.431031 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/root/.dbt', 'send_anonymous_usage_stats': True, 'quiet': False, 'no_print': False, 'cache_selected_only': False, 'skip_profile_setup': False, 'which': 'init', 'indirect_selection': 'eager'}
+[0m19:09:06.431340 [debug] [MainThread]: Tracking: tracking
+[0m19:09:06.432547 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f15adced6f0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f15adcec7c0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f15adcedd50>]}
+[0m19:09:27.390495 [debug] [MainThread]: Starter project path: /usr/local/lib/python3.10/site-packages/dbt/include/starter_project
+[0m19:09:29.062907 [info ] [MainThread]: Profile beequip_dbt_project written to /root/.dbt/profiles.yml using target's sample configuration. Once updated, you'll be able to start developing with dbt.
+[0m19:09:29.064007 [info ] [MainThread]: 
+Your new dbt project "beequip_dbt_project" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m19:09:29.064912 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f15adcec9a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f15adcedd50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f15adcee2f0>]}
+[0m19:09:29.065685 [debug] [MainThread]: Flushing usage events
