@@ -44,11 +44,14 @@ SELECT prp.installment_no                                               AS insta
               THEN prp.interest
             ELSE NULL
        END                                                              AS interest
-     , prp.outstanding_start                                            AS outstanding_start
+     , CASE WHEN prp.outstanding_start = 0
+              THEN NULL --important in case of
+            ELSE prp.outstanding_start
+       END                                                              AS outstanding_start
 FROM prep prp
 
 LEFT JOIN {{ ref('dim_day') }} day
-ON (day.date BETWEEN prp.date_from and prp.date_to)
+ON (day.date BETWEEN prp.date_from AND COALESCE(prp.date_to, prp.date_from))
 
 CROSS JOIN LATERAL (
     SELECT CASE WHEN prp.date_from = day.date THEN 1 ELSE 0 END AS ind_payment_date
